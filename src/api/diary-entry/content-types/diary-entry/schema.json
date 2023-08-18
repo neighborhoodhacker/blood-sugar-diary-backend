@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diary_entries",
+  "info": {
+    "singularName": "diary-entry",
+    "pluralName": "diary-entries",
+    "displayName": "diary-entry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "bloodSugar": {
+      "type": "integer"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "weight": {
+      "type": "integer"
+    },
+    "beforeAfter": {
+      "type": "boolean"
+    },
+    "foodConsumed": {
+      "type": "text"
+    },
+    "carbIntake": {
+      "type": "integer"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "feel": {
+      "type": "integer",
+      "max": 100,
+      "min": 0
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_preferences",
+  "info": {
+    "singularName": "user-preference",
+    "pluralName": "user-preferences",
+    "displayName": "user-preference",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "diabetesType": {
+      "type": "integer",
+      "max": 2,
+      "min": 1
+    },
+    "startingWeight": {
+      "type": "integer"
+    },
+    "targetWeight": {
+      "type": "integer"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "startingWeightDate": {
+      "type": "date"
+    },
+    "useFirstEnteredWeight": {
+      "type": "boolean"
+    },
+    "profilePic": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "birthday": {
+      "type": "date"
+    }
+  }
+}
